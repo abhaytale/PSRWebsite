@@ -1,0 +1,171 @@
+
+.divider{
+    width:5px;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.projectStatusTableContainer .projectRIRTableContainer{
+	width: 90%;
+}
+
+.checkListStatusBtn
+{
+	float: right;
+	width: 100px;
+	height: 33px;
+}
+
+
+.processChecklistContainer
+{
+	padding-top: 10px;
+
+}
+
+.processChecklistHeader
+{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	background:#C0C0C0;
+	padding-left: 5px;
+}
+
+.processChecklistTitle
+{
+	background:#00BFFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	padding-left: 5px;
+}
+
+.processChecklistTitleRed
+{
+	background:red;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	padding-left: 5px;
+}
+.processChecklistTitleAmber
+{
+	background:orange;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	padding-left: 5px;
+}
+.processChecklistTitleGreen
+{
+	background:green;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+	padding-left: 5px;
+}
+
+.selectedCheckListStyle
+{
+	border-width: 4px;
+}
+.unSelectedChecklistStyle
+{
+	border-width: 1px;
+}
+
+.projectTitle
+{
+	text-align: center;
+}
+
+.projectStatus
+{
+	background-color: orange;
+	color: white;
+	align-content: center;
+
+}
+
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+
+.dashboardTitleBold
+{
+	font-weight: bold;
+}
+
+.processCheckListSubTitle
+{
+	float: left;
+	width: 70%;
+
+}
+
+.processItem
+{
+
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+}
+
+.processChecklistParentContainer
+{
+	width: 600px;
+	margin: 0 auto;
+
+}
+
+.aParent div {
+	float: left;
+	clear: none;
+}
+
+/* Animation css
+ */
+
+
+.processActionContainer
+{
+	float: right;
+}
+
+.processActionContainer {
+	-webkit-transition: all linear 0.5s;
+	transition: all linear 0.5s;
+}
+
+.processActionContainer.ng-hide {
+
+	opacity:0;
+}
+
+.dashboard-projecttitle-container
+{
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.dashboard-projectDetails-Header
+{
+	background-color: lightgrey;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.dashboard-projecttitle-container
+	{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}

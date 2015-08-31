@@ -1,0 +1,46 @@
+<div class="container processChecklistParentContainer" ng-controller="processchecklistController2">
+
+<div class="processChecklistHeader">
+
+
+	<table style="width: 100%;">
+		<tr>
+			<td><h3 ng-click="showCompletedCheckLists(1)"> Project Checklist - of 9/15 - 9/23 </h3> </td>  <td> <h5><a ng-show="showCompleteLabel" style="float: right; margin-right: 10px;" ng-click="showCompletedCheckLists(0)"> Completed items list  </a></h5> </td>
+		</tr>
+		<tr><h5> <td> <a>Past checklist items</a></td></h5></tr>
+		</table>
+
+
+</div>
+
+	<div ng-repeat="key in keys(checkListArray)">
+
+		<div class="{{ getTitleBackgroundClass(key) }}" >
+			 {{key}}
+		</div>
+
+
+		<div class="processChecklistContainer" >
+			<ul>
+			<li class="processItem" ng-repeat="(title, statusValue) in checkListArray[key]">
+				<!--<div class="processCheckListSubTitle">{{ title }}</div>-->
+
+				{{ title }}
+
+				<button  id="btnStatus" ng-click="showActionButtons = !showActionButtons ; checkListItemComplete(key, title, checklistStatus);  checklistStatus = 'complete'; " class="{{ getClassValue(statusValue) }}"> {{checklistStatus}}</button>
+
+				<div  class="processActionContainer" ng-show="showActionButtons">
+					<button class="btn btn-success"  ng-click = "setCheckListStatus(key, title, 'g'); checklistStatus = ''; showActionButtons = !showActionButtons"> Green </button>
+					<button class="btn btn-warning"  ng-click = "setCheckListStatus(key, title, 'a'); checklistStatus = ''; showActionButtons = !showActionButtons"> Amber </button>
+					<button class="btn btn-danger"   ng-click = "setCheckListStatus(key, title, 'r'); checklistStatus = ''; showActionButtons = !showActionButtons"> Red </button>
+				</div>
+
+			</li>
+			</ul>
+		</div>
+
+
+	</div>
+</div>
+
+

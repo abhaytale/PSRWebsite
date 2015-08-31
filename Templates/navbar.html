@@ -1,0 +1,64 @@
+<!--
+
+	
+	PSR App Navbar template
+	
+	Copyright (C) - Infostretch
+-->
+
+<div id="scope" ng-controller="HeaderController">	
+			<nav id="navbar1" class="navbar navbar-default navbar-fixed-top" ng-show="loggedIn" >
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+		  <a class="navbar-brand" href="#"><img src="Assets/IS-Logo.png" style="max-height:50px; margin-top: -15px;" align="Top"/></a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar" >
+		  <ul class="nav navbar-nav">
+			  <li class="dropdown">
+			  <a class="dropdown-toggle" data-toggle="dropdown" href="">Projects<span class="caret"></span></a>
+				  
+				  <ul id="projectNames" class="dropdown-menu">
+<!--					  Drop down of projects loaded from JSON Using angular JS ng-repeat directive-->
+				<div ng-repeat="project in projects">
+						
+					<li ng-click="selectProject(project)"> &nbsp; {{ project }} </li>
+				</div>
+					  <li class="divider"></li>
+				<li><a href="#/dashboard">Create new project</a></li>
+					  
+				</ul>
+				  
+			  </li>
+			  <!--<li class="dropdown">-->
+			  	<!--<a class="dropdown-toggle" data-toggle="dropdown" href="">Weekly Status<span class="caret"></span></a>-->
+				  <!-- -->
+				  <!--<ul class="dropdown-menu">-->
+					 <!--<li > <a href="#/projectstatus">  Project Status </a> </li>-->
+					  <!--<li > <a href="#/RIR"> Risk, Issue & RCA</a> </li>-->
+				  <!--</ul>-->
+				  <!-- -->
+			  <!--</li>-->
+			  
+			  
+			<li ng-class="{ active: isActive('/dashboard')}"><a href="#/dashboard">Dashboard</a></li>
+			<li ng-class="{ active: isActive('/psr')}"><a href="#/psr" >PSR</a></li>
+			<!--<li ng-class="{ active: isActive('/resource&schedule')}"><a href="#/resource&schedule">Resource & Schedule</a></li>-->
+			<li ng-class="{ active: isActive('/processchecklist2')}"><a href="#/processchecklist">Process Checklist</a></li>
+		  </ul>
+		  <ul class="nav navbar-nav navbar-right">
+			<li ng-click="logout()"><a href=""><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+		  </ul>
+		</div>
+	  </div>		
+						
+	</nav>
+	
+	<br><br><br>
+	&nbsp; &nbsp;  <label  id="projectName" ng-show="loggedIn" >Project: {{ currentProjectName }}</label>
+		
+</div>

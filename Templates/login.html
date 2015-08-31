@@ -1,0 +1,39 @@
+<!--
+
+	
+	PSR App Login template
+	
+	Copyright (C) - Infostretch
+-->
+
+<div class="col-md-6 col-md-offset-3">
+    
+	<img src="Assets/IS-Logo.png"/> <h1> Project status reports's</h1>
+	
+	<h4>Login</h4>
+    
+    <form name="form" ng-submit="login()" role="form">
+        <div class="form-group" >
+            <label for="username">Username</label>
+            <input type="text" name="username" ng-model="userName" id="username" class="form-control" />
+			<span ng-show="userNameAlert">Username cant be blank</span> 
+        
+		</div>
+        <div class="form-group" >
+            <label for="password">Password</label>
+            <input type="password" name="password" ng-model="password" id="password" class="form-control" />
+			<span ng-show="passwordAlert">Password cant be blank</span>
+        </div>
+		  
+        
+            <div class="checkbox">
+    		<label>
+				<input type="checkbox"> Remember me
+    		</label>
+  			</div>
+		
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>

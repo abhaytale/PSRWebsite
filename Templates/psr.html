@@ -1,0 +1,171 @@
+<!--
+
+	
+	PSR App PSR template
+	
+	Copyright (C) - Infostretch
+-->
+
+
+
+<div class="container">
+
+
+<h1  class="projectTitle"> {{ currentProjectName }} </h1>
+
+
+	<div class="row">
+
+		<div class="col-lg-2 col-centered projectStatus"> <center> {{ currentProjectStatus }} </center></div>
+
+	</div>
+
+	<br><br>
+
+	<div class="row dashboard-projecttitle-container">
+
+		<div class="col-md-3 ">
+			<span class="dashboardTitleBold"> Customer: </span> {{ currentProjectName }}
+		</div>
+
+
+
+		<div class="col-md-6">
+			<span class="dashboardTitleBold"> Resource Status: </span>  No visible attrition/Right Resources on board
+		</div>
+
+
+
+	</div>
+
+
+	<div class="row">
+
+
+
+		<div class="col-lg-6">
+			<h5 class="dashboard-projectDetails-Header">Project Overview</h5>
+
+			<div class="row">
+
+				<div class="col-lg-3"><span class="dashboardTitleBold"> Business Unit:</span><br> EMS</div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Project Type:</span><br>T & M</div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">End Date:</span><br>9/30/15 </div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Time Frame:</span><br>8/22/15 - 9/30/15 </div>
+
+			</div>
+
+		</div>
+
+
+		<div class="col-lg-6">
+
+			<h5 class="dashboard-projectDetails-Header">Project leads</h5>
+
+			<div class="row">
+
+				<div class="col-lg-4"><span class="dashboardTitleBold"> Project Manager:</span><br> Payal Patel</div>
+				<div class="col-lg-4"><span class="dashboardTitleBold">Delivery manager:</span><br>Avani Makwana </div>
+				<div class="col-lg-4"><span class="dashboardTitleBold">Account Manager:</span><br>Troy Akiman </div>
+
+			</div>
+
+
+		</div>
+
+
+		<div class="col-lg-6">
+			<h5 class="dashboard-projectDetails-Header">Margins</h5>
+
+			<div class="row">
+
+				<div class="col-lg-3"><span class="dashboardTitleBold"> Plan Margin:</span><br> 0%</div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Actual Margin:</span><br>0%</div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Effort Variance:</span><br>7% </div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Actual Progress:</span><br>100% </div>
+
+			</div>
+
+		</div>
+		<div class="col-lg-6">
+			<h5 class="dashboard-projectDetails-Header">Estimated Effort</h5>
+
+			<div class="row">
+
+				<div class="col-lg-3"><span class="dashboardTitleBold"> SOW:</span><br> 960</div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">PSR:</span><br>1080</div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Variance:</span><br>113% </div>
+				<div class="col-lg-3"><span class="dashboardTitleBold">Additional Required:</span><br>0 </div>
+
+			</div>
+
+		</div>
+
+		<div class="col-lg-12">
+			<h5 class="dashboard-projectDetails-Header">Project Scope</h5>
+
+
+			<textarea class="form-control" rows="7">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitationullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseruntmollit anim id est laborum.</textarea>
+
+		</div>
+
+
+
+		</div>
+
+	</div>
+
+
+
+
+<br>
+
+
+<div class="row" style="width: 1170px;">
+
+	<table style="text-align: center; padding: 0px" border="2" >
+
+		<tr>
+
+			<td class="{{ styleFirstChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(0)"> Project kick-Off and Initalization </td>
+			<td class="{{ styleSecondChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(1)"> Project Planning</td>
+			<td class="{{ styleThirdChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(2)"> Requirement Gathering</td>
+			<td class="{{ styleFourthChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(3)"> Architecture design </td>
+			<td class="{{ styleFifthChecklist }}"style="background: orange; color: white;" ng-click="selectProjectCheckList(4)">  Sprint Planning and Execution</td>
+			<td class="{{ styleSixthChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(5)"> Do Defect review .Is defect re-open count</td>
+			<td class="{{ styleSeventhChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(6)"> Customer Release</td>
+			<td class="{{ styleEighthChecklist }}" style="background: orange; color: white;" ng-click="selectProjectCheckList(7)"> Project Sign-off</td>
+			<td class="{{ styleNinethChecklist }}" style="background: green; color: white;" ng-click="selectProjectCheckList(8)"> Project Support</td>
+
+		</tr>
+
+	</table>
+
+	<div  style="padding: 0px; width: 1170px;" class="hot handsontable " id="processCheckListTable" ></div>
+
+
+</div>
+
+	<br> <br>
+
+
+<div class="row" style="width: 1170px;">
+	<table style="text-align: center; width: 100%" border="2" >
+
+		<tr><td class="{{ styleRisk }}"><a ng-click="showRisks();">Risks</a> </td>
+			<td class="{{ styleIssue }}"><a ng-click="showIssues();"> Issues</a></td>
+			<td class="{{ styleRCA }}"><a ng-click="showRCA();"> RCA (Root Cause Analysis)</a></td></tr>
+	</table>
+
+
+	<div  style="padding: 0px; width: 1170px;" class="hot handsontable " id="psrHandsonTable" >
+	</div>
+	<br> <br>
+</div>
+	</div>
+
+
+
+
+		
+

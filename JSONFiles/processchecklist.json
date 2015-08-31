@@ -1,0 +1,18 @@
+{
+	"Project kick-off and initialization" : ["Received", 
+											"Identify PM",
+										   "Identify Team",
+										   "Identify Training Needs",
+										   "Setup Confluence project page",
+										   "Setup SVN setup completed and provide rights",
+										   "Prepare Kick-off PPT",
+										   "Do the Kick-off call",
+										   "Environment setup (client)",
+										   "Environment setup (offshore)"],
+	"Project Planning" : ["High level Sprint planning",
+						 "Approval of High level plan",
+						 "QA Strategy / Test Plan/ Test Cycles preparation for manual projects",
+						 "Approval of test Plan for manual / Automated projects",
+						 "Risk Management"]
+
+}

@@ -194,6 +194,11 @@ psrApp.controller('processchecklistController2', ['$scope', function ($scope) {
 				$scope.actionButtonClass = "checkListStatusBtn btn btn-default";
 				$scope.checklistStatus = "Complete";
 				break;
+
+			case 'n':
+				$scope.actionButtonClass = "checkListStatusBtn btn btn-info";
+				break;
+
 			default :
 				$scope.actionButtonClass = "checkListStatusBtn btn btn-default";
 				$scope.checklistStatus = "No Status";

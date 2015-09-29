@@ -35,7 +35,47 @@
 
 				{{ title }}
 
+				
+				
+				
+<!--				data-target="#myModal"   data-toggle="modal"-->
+				
+				<!--<div>-->
 				<button  id="btnStatus" ng-click="showActionButtons = !showActionButtons ; checkListItemComplete(key, title, checklistStatus);  checklistStatus = 'complete'; " class="{{ getClassValue(statusValue) }}"> {{checklistStatus}}</button>
+				
+				<button type="button" ng-click="selectedChecklistTitle = title;" class="btn btn-default checkListNotesBtn" data-toggle="modal" 	data-target="#exampleModal"  >
+  Notes
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">{{ selectedChecklistTitle }}</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+       
+          <div class="form-group">
+            <label for="message-text" class="control-label">Notes:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-----------Model End--------------->				
+				
+				
+				
+				
 
 				<div  class="processActionContainer" ng-show="showActionButtons">
 
@@ -45,6 +85,7 @@
 
 					<button class="btn btn-info"   ng-click = "setCheckListStatus(key, title, 'n'); checklistStatus = 'NA'; showActionButtons = !showActionButtons"> NA </button>
 				</div>
+				<!--</div>-->
 
 			</li>
 			</ul>

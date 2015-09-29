@@ -16,12 +16,11 @@ psrApp.controller('processchecklistController2', ['$scope', function ($scope) {
 	$scope.checklistStatus = "No Status";
 	$scope.titleClass = "processChecklistTitle";
 
+	$scope.selectedChecklistTitle = "Test Title"
 
 	$scope.checklistRefArray;
 
 	$scope.showCompleteLabel = true;
-
-
 
 
 	$scope.completedCheckList = {
@@ -128,7 +127,10 @@ psrApp.controller('processchecklistController2', ['$scope', function ($scope) {
 
 		if (status == 'complete') {
 
-			delete $scope.checkListArray[parentIndex][index];
+			// Enable following line if completed checklist needs to be removed from existing list
+
+			//delete $scope.checkListArray[parentIndex][index];
+
 
 			var completedAction = {};
 
@@ -149,8 +151,6 @@ psrApp.controller('processchecklistController2', ['$scope', function ($scope) {
 
 			}
 
-
-			console.log($scope.completedCheckList);
 		}
 
 

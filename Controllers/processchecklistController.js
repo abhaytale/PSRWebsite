@@ -27,6 +27,12 @@ psrApp.controller('processchecklistController2', ['$scope', function ($scope) {
 
 
 	};
+	
+	
+	$scope.setSelectedChecklistTitle = function(title) {
+		
+		$scope.selectedChecklistTitle = title ;
+	}
 
 
 	/**
